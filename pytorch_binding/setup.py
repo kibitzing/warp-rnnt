@@ -7,13 +7,13 @@ from torch.utils.cpp_extension import BuildExtension, CUDAExtension
 
 
 def get_requirements():
-    req_file = os.path.join(os.path.dirname(__file__), "requirements.txt")
+    req_file = os.path.join(os.path.dirname(__file__), "../requirements.txt")
     with io.open(req_file, "r", encoding="utf-8") as f:
         return [line.strip() for line in f]
 
 
 def get_long_description():
-    readme_file = os.path.join(os.path.dirname(__file__), "README.md")
+    readme_file = os.path.join(os.path.dirname(__file__), "../README.md")
     with io.open(readme_file, "r", encoding="utf-8") as f:
         return f.read()
 
