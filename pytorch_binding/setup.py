@@ -17,6 +17,8 @@ def get_long_description():
     with io.open(readme_file, "r", encoding="utf-8") as f:
         return f.read()
 
+print('torch version', torch.__version__)
+print(torch.cuda.is_available())
 
 if not torch.cuda.is_available():
     raise Exception("CPU version is not implemented")
