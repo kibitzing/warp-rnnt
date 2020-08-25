@@ -20,8 +20,9 @@ def get_long_description():
 print('torch version', torch.__version__)
 print('is avaliable?', torch.cuda.is_available())
 print('init?', torch.cuda.is_initialized())
-print(torch.cuda.current_device(),'current_device')
 torch.cuda.init()
+
+print(torch.cuda.current_device(),'current_device')
 print('init?', torch.cuda.is_initialized())
 print('is avaliable?', torch.cuda.is_available())
 
