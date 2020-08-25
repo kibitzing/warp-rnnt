@@ -18,7 +18,12 @@ def get_long_description():
         return f.read()
 
 print('torch version', torch.__version__)
-print(torch.cuda.is_available())
+print('is avaliable?', torch.cuda.is_available())
+print('init?', torch.cuda.is_initialized())
+print(torch.cuda.current_device(),'current_device'
+torch.cuda.init()
+print('init?', torch.cuda.is_initialized())
+print('is avaliable?', torch.cuda.is_available())
 
 if not torch.cuda.is_available():
     raise Exception("CPU version is not implemented")
