@@ -17,17 +17,8 @@ def get_long_description():
     with io.open(readme_file, "r", encoding="utf-8") as f:
         return f.read()
 
-print('torch version', torch.__version__)
-print('is avaliable?', torch.cuda.is_available())
-print('init?', torch.cuda.is_initialized())
-torch.cuda.init()
-
-print(torch.cuda.current_device(),'current_device')
-print('init?', torch.cuda.is_initialized())
-print('is avaliable?', torch.cuda.is_available())
-
-if not torch.cuda.is_available():
-    raise Exception("CPU version is not implemented")
+#if not torch.cuda.is_available():
+#   raise Exception("CPU version is not implemented")
 
 
 requirements = get_requirements()
